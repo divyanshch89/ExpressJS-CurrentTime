@@ -12,5 +12,8 @@ app.get('/currenttime', function (req, res) {
     var d = new Date();
     res.json({ "time": d.toLocaleTimeString() });
 });
+app.get('/', function (req, res) {
+    res.send("Welcome to demo Express JS API");
+});
 //for heroku deployment
 app.listen(port);
