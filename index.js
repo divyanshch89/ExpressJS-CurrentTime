@@ -1,7 +1,7 @@
 var express = require('express');
 var helmet = require('helmet');
 var app = express();
-const port = process.env.port;
+var port = process.env.PORT || 8080;
 app.use(helmet());
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
